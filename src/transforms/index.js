@@ -23,11 +23,11 @@ import { directionFactory, parseShadowOffset } from './util'
 const background = tokenStream => ({
   backgroundColor: tokenStream.expect(COLOR),
 })
-const borderColor = directionFactory({
-  types: [COLOR],
-  prefix: 'border',
-  suffix: 'Color',
-})
+// const borderColor = directionFactory({
+//   types: [COLOR],
+//   prefix: 'border',
+//   suffix: 'Color',
+// })
 const borderRadius = directionFactory({
   directions: ['TopLeft', 'TopRight', 'BottomRight', 'BottomLeft'],
   prefix: 'border',
@@ -55,7 +55,7 @@ const textShadowOffset = tokenStream => ({
 export default {
   background,
   border,
-  borderColor,
+//   borderColor,
   borderRadius,
   borderWidth,
   boxShadow,
